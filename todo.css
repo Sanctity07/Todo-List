@@ -1,0 +1,99 @@
+/* Container for the To-Do list */
+.js-todo-list {
+    display: flex;  /* Use flexbox for vertical stacking */
+    flex-direction: column;  /* Stack items vertically */
+    gap: 15px;  /* Add spacing between items */
+    padding: 20px;  /* Optional: Add padding around the list */
+}
+
+/* Styling each individual To-Do item */
+.todo-item {
+    background-color: #f9f9f9;  /* Light background color */
+    padding: 15px;  /* Padding around the item */
+    border: 1px solid #ddd;  /* Light border */
+    border-radius: 5px;  /* Rounded corners */
+    width: 100%;  /* Ensures each item takes full width */
+    display: block;  /* Makes it behave like a block-level element */
+    box-sizing: border-box;  /* Includes padding and border in the width calculation */
+    font-family: Arial, sans-serif;  /* Adds a clean font */
+    transition: background-color 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* To-Do name styling */
+.todo-name {
+    font-weight: bold;  /* Bold for the task name */
+    font-size: 1.2em;  /* Larger font size for task name */
+    margin-bottom: 10px;  /* Add some space below the name */
+}
+
+/* To-Do due date styling */
+.todo-due-date {
+    color: #888;  /* Lighter color for due date */
+    font-size: 0.9em;  /* Smaller font size for the due date */
+    margin-bottom: 15px;  /* Space between the due date and button */
+}
+
+/* Delete button styling */
+button {
+    margin-top: 10px;  /* Space between the task content and button */
+    padding: 10px 15px;  /* Padding for the button */
+    background-color: #ff4d4d;  /* Red background */
+    border: none;  /* Remove default border */
+    border-radius: 5px;  /* Rounded corners for the button */
+    color: white;  /* White text */
+    cursor: pointer;  /* Pointer cursor on hover */
+    font-size: 1em;  /* Standard button font size */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #ff0000;  /* Darker red when hovered */
+}
+
+/* Styling for the input fields */
+input[type="text"], input[type="date"] {
+    padding: 10px;  /* Padding inside the input fields */
+    margin: 10px 0;  /* Space around the input fields */
+    border: 1px solid #ddd;  /* Light border */
+    border-radius: 5px;  /* Rounded corners for the input fields */
+    width: 100%;  /* Full width */
+    font-size: 1em;  /* Standard font size */
+}
+
+/* Placeholder styling */
+input::placeholder {
+    color: #bbb;  /* Lighter color for the placeholder text */
+    font-style: italic;  /* Italicize placeholder text */
+}
+
+/* Styling for the "Add" button */
+button.add-button {
+    background-color: #4CAF50;  /* Green background for Add button */
+    font-size: 1.1em;  /* Slightly larger font size */
+    margin-top: 20px;  /* Space above the button */
+}
+
+/* Add button hover effect */
+button.add-button:hover {
+    background-color: #45a049;  /* Darker green when hovered */
+}
+
+/* Responsive Design: Ensure the layout adapts on smaller screens */
+@media (max-width: 600px) {
+    .js-todo-list {
+        padding: 10px;  /* Reduce padding on smaller screens */
+    }
+    
+    .todo-item {
+        padding: 10px;  /* Reduce padding inside To-Do items */
+    }
+    
+    button {
+        padding: 8px 12px;  /* Smaller padding for buttons on small screens */
+    }
+    
+    input[type="text"], input[type="date"] {
+        padding: 8px;  /* Smaller padding for input fields on small screens */
+    }
+}
